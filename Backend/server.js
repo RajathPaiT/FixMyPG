@@ -196,22 +196,22 @@ app.put("/complaints/:id", (request, response) => {
     }
 
     let validCategories = [
-    "Electricity",
-    "Plumbing",
-    "Water Supply",
-    "Internet",
-    "Housekeeping",
-    "Maintenance",
-    "Other"
-];
+        "Electricity",
+        "Plumbing",
+        "Water Supply",
+        "Internet",
+        "Housekeeping",
+        "Maintenance",
+        "Other"
+    ];
 
-if (!validCategories.includes(category)) {
+    if (!validCategories.includes(category)) {
 
-    return response.status(400).json({
-        message: "Invalid complaint category"
-    });
+        return response.status(400).json({
+            message: "Invalid complaint category"
+        });
 
-}
+    }
 
 
     let validPriorities = [
@@ -221,13 +221,13 @@ if (!validCategories.includes(category)) {
         "Urgent"
     ];
 
-if (!validPriorities.includes(priority)) {
+    if (!validPriorities.includes(priority)) {
 
-    return response.status(400).json({
-        message: "Invalid priority"
-    });
+        return response.status(400).json({
+            message: "Invalid priority"
+        });
 
-}
+    }
 
 
     complaint.residentName = residentName;
