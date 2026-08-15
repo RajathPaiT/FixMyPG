@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>FixMyPG - Complaint Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>FixMyPG</h1>
+    <h3>Apartment / PG Complaint Management System</h3>
+
+    <button onclick="showForm()">+ Submit Complaint</button>
+
+    <hr><hr>
+
+    <h2>Complaints</h2>
+
+    <input type="text" id="search" placeholder="Search complaints...">
+
+    <select id="statusFilter">
+        <option value="All">All Status</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Resolved">Resolved</option>
+        <option value="Cancelled">Cancelled</option>
+    </select>
+
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Electricity">Electricity</option>
+        <option value="Plumbing">Plumbing</option>
+        <option value="Water Supply">Water Supply</option>
+        <option value="Internet">Internet</option>
+        <option value="Housekeeping">Housekeeping</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <div id="complaintList"></div>
+
+    <!-- Complaint Form -->
+
+    <div id="complaintForm">
+
+        <h2>Submit Complaint</h2>
+
+        <form id="form">
+
+            <label>Resident Name</label>
+            <input type="text" id="residentName">
+
+            <label>Room / Flat Number</label>
+            <input type="text" id="roomNumber">
+
+            <label>Phone Number</label>
+            <input type="text" id="phone">
+
+            <label>Complaint Category</label>
+            <select id="category">
+
+                <option value="">Select Category</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Plumbing">Plumbing</option>
+                <option value="Water Supply">Water Supply</option>
+                <option value="Internet">Internet</option>
+                <option value="Housekeeping">Housekeeping</option>
+                <option value="Maintenance">Maintenance</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+            <label>Description</label>
+            <textarea id="description"></textarea>
+
+            <label>Priority</label>
+
+            <select id="priority">
+
+                <option value="">Select Priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Urgent">Urgent</option>
+
+            </select>
+
+            <br><br>
+
+            <button type="submit">Submit Complaint</button>
+
+            <button type="button" onclick="hideForm()">Cancel</button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    font-family: cursive;
+    margin: 30px;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    color: gold;
+}
+
+h3 {
+    text-align: center;
+    color: gold;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: gold;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: white;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    margin: 5px;
+    font-family: cursive;
+}
+
+#complaintForm {
+    display: none;
+    background-color: gray;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid gold;
+    border-radius: 10px;
+}
+
+#complaintForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+#complaintForm input,
+#complaintForm select,
+#complaintForm textarea {
+    display: block;
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#complaintForm textarea {
+    height: 100px;
+}
+
+.complaint {
+    background-color: grey;
+    border: 3px solid gold;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.status {
+    padding: 5px 10px;
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: gold;
+    color: black;
+}
+
+#search,
+#statusFilter,
+#categoryFilter {
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        margin: 10px;
+    }
+
+    #complaintForm input,
+    #complaintForm select,
+    #complaintForm textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .complaint {
+        padding: 15px;
+    }
+
+}
