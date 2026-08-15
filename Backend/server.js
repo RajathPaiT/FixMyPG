@@ -214,12 +214,12 @@ if (!validCategories.includes(category)) {
 }
 
 
-let validPriorities = [
-    "Low",
-    "Medium",
-    "High",
-    "Urgent"
-];
+    let validPriorities = [
+        "Low",
+        "Medium",
+        "High",
+        "Urgent"
+    ];
 
 if (!validPriorities.includes(priority)) {
 
