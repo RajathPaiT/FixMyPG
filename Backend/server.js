@@ -11,6 +11,8 @@ app.use(express.json());
 
 let complaints = [];
 
+let nextId = 1;
+
 app.get("/complaints", (request, response) => {
 
     return response.json(complaints);
@@ -93,7 +95,7 @@ app.post("/complaints", (request, response) => {
 
     let complaint = {
 
-        id: complaints.length + 1,
+        id: nextId,
 
         residentName: residentName,
 
@@ -115,6 +117,7 @@ app.post("/complaints", (request, response) => {
 
 
     complaints.push(complaint);
+    nextId++;
 
 
     return response.status(201).json(complaint);
@@ -191,6 +194,40 @@ app.put("/complaints/:id", (request, response) => {
         });
 
     }
+
+    let validCategories = [
+    "Electricity",
+    "Plumbing",
+    "Water Supply",
+    "Internet",
+    "Housekeeping",
+    "Maintenance",
+    "Other"
+];
+
+if (!validCategories.includes(category)) {
+
+    return response.status(400).json({
+        message: "Invalid complaint category"
+    });
+
+}
+
+
+let validPriorities = [
+    "Low",
+    "Medium",
+    "High",
+    "Urgent"
+];
+
+if (!validPriorities.includes(priority)) {
+
+    return response.status(400).json({
+        message: "Invalid priority"
+    });
+
+}
 
 
     complaint.residentName = residentName;
